@@ -187,10 +187,8 @@ function updatePoolLiquidity(id: string): void {
     }
   }
 
-  if (liquidity.gt(BigDecimal.fromString('0'))) {
-    pool.liquidity = liquidity
-    pool.save()
-  }
+  pool.liquidity = liquidity
+  pool.save()
 }
 
 /************************************
